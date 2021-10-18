@@ -1,5 +1,5 @@
 DFRobotMaqueenPlus.IR_callbackUser(function (message) {
-    basic.showString("" + (message))
+    basic.showNumber(message)
 })
 DFRobotMaqueenPlus.servoRun(Servos.S1, 0)
 basic.pause(2000)

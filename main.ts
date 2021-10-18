@@ -1,0 +1,20 @@
+DFRobotMaqueenPlus.IR_callbackUser(function (message) {
+    basic.showString("" + (message))
+})
+DFRobotMaqueenPlus.servoRun(Servos.S1, 0)
+basic.pause(2000)
+DFRobotMaqueenPlus.servoRun(Servos.S1, 110)
+basic.clearScreen()
+basic.forever(function () {
+    DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBL, Color.RED)
+    DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBR, Color.BLUE)
+    basic.pause(500)
+    DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBL, Color.BLUE)
+    DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBR, Color.RED)
+    basic.pause(500)
+})
+basic.forever(function () {
+    music.setVolume(29)
+    music.playTone(392, music.beat(BeatFraction.Whole))
+    music.playTone(330, music.beat(BeatFraction.Whole))
+})
